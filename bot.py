@@ -39,6 +39,13 @@ async def on_ready():
        print('시작!')
        await bot.change_presence(game=discord.Game(name='보석보다 아름다운 흰둥이와 놀아주는 중이니라'))
    
+filter = {"fuck","shit","씨발"}
+
+@bot.listen()
+async def on_message(message):
+    if message.content.lower() in filter:
+        await bot.delete_message(message)
+   
  
 
      
@@ -94,6 +101,21 @@ async def 놀아줘():
 
     ]
     await bot.say(random.choice(possible_responses))
+   
+@bot.event
+async def on_message(message):
+    if message.content == "hello":
+        await bot.send_message(message.author, "hi")
+    elif message.content == "gg":
+        await bot.send_message(message.channel, "gg man, nice game")
+    elif message.content == "fuck":
+        await bot.send_message(message.channel, "don't swear you mother fucker")
+    elif message.content == "shit":
+        await bot.send_message(message.channel, "hey!, watch your word!")
+    elif message.content == "씨발":
+        await bot.send_message(message.channel, "닥쳐라 미친놈이 빨리 뒤지고 싶어서 환장했나")
+   
+  
 
    
 
