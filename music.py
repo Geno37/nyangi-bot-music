@@ -1,12 +1,9 @@
 import discord
-from discord.ext.commands import Bot
 from discord.ext import commands
 from discord.voice_client import VoiceClient
 from discord import opus 
 import asyncio
-import time
 import random
-import os
 import functools, youtube_dl
 from discord.ext import commands
 if not discord.opus.is_loaded():
