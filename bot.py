@@ -37,7 +37,19 @@ ser=[]
 @bot.event
 async def on_ready():
        print('시작!')
-       await bot.change_presence(game=discord.Game(name='보석보다 아름다운 흰둥이와 놀아주는 중이니라'))
+       while True:
+           await bot.change_presence(game=discord.Game(name='보석보다 아름다운 흰둥이와 놀아주는 중이니라'))
+           await asyncio.sleep(10)
+           await bot.change_presence(game=discord.Game(name='흰둥이 재우는 중'))
+           await asyncio.sleep(10)
+           await bot.change_presence(game=discord.Game(name='내 이름은 냥이이니라'))
+           await asyncio.sleep(10)
+           await bot.change_presence(game=discord.Game(name='심심하구나....'))
+           await asyncio.sleep(10)
+           await bot.change_presence(game=discord.Game(name='손 씻는중'))
+           await asyncio.sleep(10)
+     
+   
    
 
      
