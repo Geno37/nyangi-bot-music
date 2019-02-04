@@ -39,14 +39,6 @@ async def on_ready():
        print('시작!')
        await bot.change_presence(game=discord.Game(name='보석보다 아름다운 흰둥이와 놀아주는 중이니라'))
    
-filter = {"fuck","shit","씨발"}
-
-@bot.listen()
-async def on_message(message):
-    if message.content.lower() in filter:
-        await bot.delete_message(message)
-   
- 
 
      
 
